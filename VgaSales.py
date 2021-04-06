@@ -7,6 +7,7 @@ os.chdir(r"C:\Users\besso\OneDrive\Desktop\UCD")
 
 vga = pd.read_csv("vgsales.csv", encoding="UTF-8")
 
-print(vga.shape)
-print(vga.dtypes)
-print(len(vga.Name.unique()))
+vga1 = vga.drop_duplicates("Name")
+
+print(len(vga1))
+print(len(vga1.Name.unique()))
