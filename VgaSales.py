@@ -9,5 +9,5 @@ vga = pd.read_csv("vgsales.csv", encoding="UTF-8")
 
 vga1 = vga.drop_duplicates("Name")
 
-vga_check = vga1.isnull().sum()
-print(vga_check)
+vga_publ_check = vga1[vga1["Publisher"].isnull()]
+print(vga_publ_check)
