@@ -14,5 +14,8 @@ vga2 = vga1.dropna()
 vga_NA = vga2[["Name", "Year", "NA_Sales"]]
 vga_EU = vga2[["Name", "Year", "EU_Sales"]]
 vga_JP = vga2[["Name", "Year", "JP_Sales"]]
-vga_Ot = vga2[["Name", "Year", "Other_Sales"]]
+vga_OS = vga2[["Name", "Year", "Other_Sales"]]
 vga_GL = vga2[["Name", "Year", "Global_Sales"]]
+
+NA_top = vga_NA[vga_NA["NA_Sales"] == 1].sort_values("Name").head(10)
+print(NA_top)
