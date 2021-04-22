@@ -14,5 +14,13 @@ vga2 = vga1.dropna()
 vga_NA = vga2[["Name", "Year", "NA_Sales"]]
 vga_EU = vga2[["Name", "Year", "EU_Sales"]]
 vga_JP = vga2[["Name", "Year", "JP_Sales"]]
-vga_Ot = vga2[["Name", "Year", "Other_Sales"]]
-vga_GL = vga2[["Name", "Year", "Global_Sales"]]
+vga_OS = vga2[["Name", "Year", "Other_Sales"]]
+vga_GS = vga2[["Name", "Year", "Global_Sales"]]
+
+NA_top = vga_NA.sort_values("NA_Sales", ascending=False)
+EU_top = vga_EU.sort_values("EU_Sales", ascending=False)
+JP_top = vga_JP.sort_values("JP_Sales", ascending=False)
+OS_top = vga_OS.sort_values("Other_Sales", ascending=False)
+GS_top = vga_GS.sort_values("Global_Sales", ascending=False)
+
+print(vga2.loc[vga2["Name"] == "Wii Sports"])
