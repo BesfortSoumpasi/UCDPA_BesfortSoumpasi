@@ -29,3 +29,7 @@ Wii_JP = vga2.iloc[0]["JP_Sales"]
 Wii_OS = vga2.iloc[0]["Other_Sales"]
 Wii_GS = vga2.iloc[0]["Global_Sales"]
 
+x = Wii_GS, Wii_OS, Wii_JP, Wii_UE, Wii_NA
+y = ("Global", "Other", "Japan", "Europe", "NA")
+plt.plot(x,y, "bo")
+plt.show()
