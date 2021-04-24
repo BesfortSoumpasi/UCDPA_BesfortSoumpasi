@@ -28,4 +28,3 @@ Wii_UE = vga2.iloc[0]["EU_Sales"]
 Wii_JP = vga2.iloc[0]["JP_Sales"]
 Wii_OS = vga2.iloc[0]["Other_Sales"]
 Wii_GS = vga2.iloc[0]["Global_Sales"]
-
