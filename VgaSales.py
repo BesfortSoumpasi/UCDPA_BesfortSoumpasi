@@ -32,4 +32,13 @@ Wii_GS = vga2.iloc[0]["Global_Sales"]
 x = Wii_GS, Wii_OS, Wii_JP, Wii_UE, Wii_NA
 y = ("Global", "Other", "Japan", "Europe", "NA")
 
-print(vga2.loc[vga2["Name"] == "Super Mario Bros."])
+SMB_NA = vga2.iloc[1]["NA_Sales"]
+SMB_EU = vga2.iloc[1]["EU_Sales"]
+SMB_JP = vga2.iloc[1]["JP_Sales"]
+SMB_OS = vga2.iloc[1]["Other_Sales"]
+SMB_GS = vga2.iloc[1]["Global_Sales"]
+
+x1 = SMB_GS, SMB_OS, SMB_JP, SMB_EU, SMB_NA
+
+plt.plot(x1, y, "bo")
+plt.show()
