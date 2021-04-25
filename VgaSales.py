@@ -31,6 +31,8 @@ Wii_GS = vga2.iloc[0]["Global_Sales"]
 
 x = Wii_GS, Wii_OS, Wii_JP, Wii_UE, Wii_NA
 y = ("Global", "Other", "Japan", "Europe", "NA")
+x1 = Wii_OS, Wii_JP, Wii_UE, Wii_NA # x1 and y1 = Wii sales excluding global sales
+y1 = ("Other", "Japan", "Europe", "NA")
 
 SMB_NA = vga2.iloc[1]["NA_Sales"]
 SMB_EU = vga2.iloc[1]["EU_Sales"]
@@ -41,7 +43,13 @@ SMB_GS = vga2.iloc[1]["Global_Sales"]
 x2 = SMB_OS, SMB_JP, SMB_EU, SMB_NA #x2 will stand for sales of mario bros without showing global sales
 y2 = ("Other", "Japan", "Europe", "NA")
 colors = ["y", "r", "b", "g"]
-plt.pie(x2, labels=y2, colors=colors, shadow=True, explode=(0.05, 0.05, 0.05, 0.05), autopct="%1.1f%%")
-plt.axis("equal")
 
+Wii_vs_SMB = pd.DataFrame({"Wii":(x1),
+                           "Super M": (x2)
+                           },
+                          index=["Other", "Japan", "EU", "NA"])
+Wii_vs_SMB.plot(kind="bar")
+plt.title("Wii Sports VS Super Mario Bros. Sales")
+plt.xlabel("Region")
+plt.ylabel("Sales in Millions")
 plt.show()
