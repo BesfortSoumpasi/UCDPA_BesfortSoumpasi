@@ -38,7 +38,10 @@ SMB_JP = vga2.iloc[1]["JP_Sales"]
 SMB_OS = vga2.iloc[1]["Other_Sales"]
 SMB_GS = vga2.iloc[1]["Global_Sales"]
 
-x1 = SMB_GS, SMB_OS, SMB_JP, SMB_EU, SMB_NA
+x2 = SMB_OS, SMB_JP, SMB_EU, SMB_NA #x2 will stand for sales of mario bros without showing global sales
+y2 = ("Other", "Japan", "Europe", "NA")
+colors = ["y", "r", "b", "g"]
+plt.pie(x2, labels=y2, colors=colors, shadow=True, explode=(0.05, 0.05, 0.05, 0.05), autopct="%1.1f%%")
+plt.axis("equal")
 
-plt.plot(x1, y, "bo")
 plt.show()
